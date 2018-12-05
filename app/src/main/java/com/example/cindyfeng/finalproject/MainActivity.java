@@ -1,5 +1,6 @@
 package com.example.cindyfeng.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -19,6 +20,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
+    private Button settings_button;
+
+    @Override
+    public <T extends View> T findViewById(int id) {
+        return super.findViewById(id);
+    }
 
     /**
      * Default logging tag for messages from the main activity.
@@ -40,7 +47,14 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         setContentView(R.layout.activity_main);
+        settings_button = (Button) findViewById(R.id.settings_button);
+        settings_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity2();
 
+            }
+        });
         final Button getSuggestionBtn = (Button) findViewById(R.id.getSuggestionBtn);
         final SeekBar participantInput = (SeekBar) findViewById(R.id.participantInput);
 
@@ -53,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
                 //imageCall(searchTerm);
             }
         });
+
+    }
+    public void openActivity2() {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
     }
 
     void getSuggestionCall(final int participants) {
