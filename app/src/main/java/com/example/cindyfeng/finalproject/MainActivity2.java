@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity2 extends AppCompatActivity {
     private Button goBackButton;
+    private SoundPlayer sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,13 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
+        sound = new SoundPlayer(this);
     }
     public void openActivity1() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        //sound.playYourMom();
     }
+
 }
+

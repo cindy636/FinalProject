@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#abcdef"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
@@ -63,7 +63,7 @@
         android:layout_height="34dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="140dp"
         android:text="Name:"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -82,7 +82,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="104dp"
         android:text="Type:"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -90,7 +90,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -101,7 +101,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="68dp"
         android:text="Accessibility:"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -109,7 +109,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -120,7 +120,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="32dp"
         android:text="Price:"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -133,8 +133,8 @@
 
     <ImageView
         android:id="@+id/responseImage"
-        android:layout_width="360dp"
-        android:layout_height="185dp"
+        android:layout_width="0dp"
+        android:layout_height="209dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -146,7 +146,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getSuggestionBtn"
-        app:layout_constraintVertical_bias="0.093"
+        app:layout_constraintVertical_bias="0.144"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -227,8 +227,8 @@
 
     <Button
         android:id="@+id/settings_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="66dp"
+        android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -239,9 +239,9 @@
         android:text="Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.982" />
 
 </android.support.constraint.ConstraintLayout>
