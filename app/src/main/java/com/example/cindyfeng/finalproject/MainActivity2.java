@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity2 extends AppCompatActivity {
+    /** our go back button that goes back to the main activity. */
     private Button goBackButton;
+    /** the sound that comes with the go back button. */
     private SoundPlayer sound;
 
     @Override
@@ -24,6 +26,7 @@ public class MainActivity2 extends AppCompatActivity {
         });
         sound = new SoundPlayer(this);
     }
+    /** the method for the button that opens the main activity.*/
     public void openActivity1() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

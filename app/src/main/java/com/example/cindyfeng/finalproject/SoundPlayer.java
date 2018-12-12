@@ -27,9 +27,9 @@ public class SoundPlayer {
     public void playWowSound() {
         soundPool.play(wowSound, 1.0f, 1.0f, 1, 0, 1.0f);
     }
-    public void playYourMom() {
+    /**public void playYourMom() {
         soundPool.play(momSound, 1.0f, 1.0f, 1, 0, 1.0f);
-    }
+    }*/
 
     /*public void playHitSound() {
         soundPool.play(hitSound, 1.0f, 1.0f, 1, 0, 1.0f);

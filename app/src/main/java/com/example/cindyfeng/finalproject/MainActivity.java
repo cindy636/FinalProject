@@ -25,6 +25,7 @@ import org.json.JSONObject;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    /** the info button*/
     private Button settings_button;
 
     @Override
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Lab11:Main";
 
     private static String previous = "";
+    /**
+     * the sound effects for the buttons in the main activity.
+     */
     private SoundPlayer sound;
 
     /**
@@ -75,12 +79,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    /** method for button that opens the info page.*/
     public void openActivity2() {
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
         sound.playWowSound();
     }
 
+
+    /** method for calling the activity generator button. */
     void getSuggestionCall(final int participants) {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -106,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         sound.playOverSound();
     }
 
+    /** our call to the API. */
     void apiCallDone(final JSONObject response, final int participants) {
         try {
             String activityNameString = response.get("activity").toString();
@@ -151,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    /** a method to categorize the accesiblity.*/
     String accessRate(final double number) {
         if (number <= 0.333) {
             return "Very accessible";
@@ -162,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** a method to categorize the price.*/
     String priceRate(final double number) {
         if (number <= 0.333) {
             return "Inexpensive";
@@ -173,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** the method that calls the image that comes with every activity. */
     void imageCall(final String searchTerm) {
         //Log.d(TAG, "IMAGE CALLED");
         ImageView responseImage = (ImageView) findViewById(R.id.responseImage);
